@@ -342,7 +342,7 @@
                 .then(response => response.json())
                 .then(data => {
                   alert(data.message); // You might want to replace this with a more user-friendly notification
-                  if (data.message === "Successfully added to newsletter") {
+                  if (data.message === "Successfully added to waitlist") {
                     document.getElementById('newsletterForm').reset();
                   }
                 })
