@@ -68,29 +68,9 @@ function createEmailVerificationOverlay() {
         const email = document.getElementById('verify-email').value;
         localStorage.setItem('verified-email', email);
 
-        //send slack notification
-        try {
-            // NOTE: embedding a Slack webhook URL in client-side code makes it visible to anyone who views
-            // the page source. For production, proxy this request through a server to keep the webhook secret.
-            const slackWebhookUrl = 'https://hooks.slack.com/services/';
-            const payload = { text: `New AnkitButi.com Site visitor: ${email} — ${window.location.href}` };
-
-            // use fetch; don't block the UI on success/failure
-            fetch(slackWebhookUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-                keepalive: true
-            }).then(response => {
-                // Slack returns 200 OK on success; we can log for debugging
-                if (!response.ok) console.warn('Slack webhook responded with', response.status);
-            }).catch(err => {
-                // CORS or network errors can happen when calling Slack from the browser
-                console.error('Error sending Slack notification:', err);
-            });
-        } catch (err) {
-            console.error('Slack notification failed:', err);
-        }
+        //send notification, save to db and call event on google analytics to track email - todo1
+        //send magic link / otp to truly verify the email address - todo2
+        //conver this to a server app - todo3
 
         // restore page state
         if (mainContent) {
