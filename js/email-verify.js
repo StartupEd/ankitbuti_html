@@ -72,7 +72,7 @@ function createEmailVerificationOverlay() {
         try {
             // NOTE: embedding a Slack webhook URL in client-side code makes it visible to anyone who views
             // the page source. For production, proxy this request through a server to keep the webhook secret.
-            const slackWebhookUrl = 'https://hooks.slack.com/services/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';
+            const slackWebhookUrl = 'https://hooks.slack.com/services/';
             const payload = { text: `New AnkitButi.com Site visitor: ${email} — ${window.location.href}` };
 
             // use fetch; don't block the UI on success/failure
