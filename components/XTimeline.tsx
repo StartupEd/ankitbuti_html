@@ -1,7 +1,5 @@
 'use client';
 
-import Script from 'next/script';
-
 const X_USERNAME = process.env.NEXT_PUBLIC_X_USERNAME || 'twitter';
 const X_PROFILE_URL = `https://twitter.com/${X_USERNAME}`;
 
@@ -26,21 +24,17 @@ export default function XTimeline() {
           </svg>
           View profile on X
         </a>
-        <div className="mt-4" id="x-follow-button-container">
+        <p className="mt-3">
           <a
             href={`https://twitter.com/intent/follow?screen_name=${X_USERNAME}&ref_src=twsrc%5Etfw`}
-            className="twitter-follow-button"
-            data-size="large"
-            data-show-count="false"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-gray-500 dark:text-gray-400 hover:underline"
           >
-            Follow @{X_USERNAME}
+            Follow @{X_USERNAME} →
           </a>
-        </div>
+        </p>
       </div>
-      <Script
-        src="https://platform.twitter.com/widgets.js"
-        strategy="lazyOnload"
-      />
     </section>
   );
 }

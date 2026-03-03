@@ -9,9 +9,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: 'Chordify',
-    description: 'Music learning and chord recognition platform.',
-    url: 'https://chordify.net',
-    tags: ['Music', 'EdTech'],
+    description: 'Engineering experts for SaaS & AI products. Scale your MVP to thousands of users; product development, team extension, fractional CTO.',
+    url: 'https://chordify.com/',
+    tags: ['SaaS', 'AI', 'Product Development'],
   },
   {
     title: 'AI Assistant.co',
@@ -23,26 +23,31 @@ export const projects: Project[] = [
   {
     title: 'Juno.Co',
     description: 'Customer project delivery and collaboration.',
+    tags: ['SaaS', 'Product Development'],
     url: 'https://juno.co',
   },
   {
-    title: 'WeMix',
+    title: 'WeMix Concrete',
     description: 'Customer project—content and community platform.',
-    url: 'https://wemix.com',
+    url: 'https://wemixconcrete.com',
+    tags: ['SaaS', 'Product Development'],
   },
   {
     title: 'Partner Utopia',
     description: 'Partner ecosystem and collaboration platform.',
     url: 'https://partnerutopia.com',
+    tags: ['SaaS', 'Product Development'],
   },
   {
     title: 'In Peak',
     description: 'Customer project—performance and insights.',
     url: 'https://inpeak.com',
+    tags: ['SaaS', 'Product Development'],
   },
   {
     title: 'Senioritis',
     description: 'Platform for seniors and life-stage transitions.',
-    url: 'https://senioritis.com',
-  },
+    url: 'https://senioritiscare.com',
+    tags: ['SaaS', 'Product Development'],
+  }
 ];

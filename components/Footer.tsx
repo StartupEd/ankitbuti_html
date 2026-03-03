@@ -51,7 +51,7 @@ export default function Footer() {
         </li>
       </ul>
       <p className="text-sm text-gray-400 dark:text-gray-600">&copy; 2026 Ankit Buti. All rights reserved.</p>
-      <p className="text-sm text-gray-200 dark:text-gray-300">Last Updated: Feb 10th, 2026</p>
+      <p className="text-sm text-gray-200 dark:text-gray-300">Last Updated: March 3rd, 2026</p>
     </footer>
   );
 }

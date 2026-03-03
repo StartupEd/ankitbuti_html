@@ -90,6 +90,7 @@ export default function Header() {
           width={300}
           height={300}
           alt="Ankit Buti"
+          style={{ height: 'auto', width: 'auto', maxWidth: '100%' }}
         />
       </div>
     </header>
