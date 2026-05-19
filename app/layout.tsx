@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     'Ankit Buti — Customer Engineering & AI SaaS Product Leader based in San Francisco. Founder of Startuped.AI. Expertise in product, engineering, GTM, and AI-driven growth.',
   keywords:
-    'Ankit Buti, Startuped, AI SaaS, Customer Engineering, Product Leader, GTM, AI, SaaS, Founder, San Francisco, Purdue, Boilermaker, Buti',
+    'Ankit Buti, Startuped, AI SaaS, Customer Engineering, AI Product Leader, Revenue Intelligence, Closed Loop GTM, Enterprise GTM, AI Agents, Go-To-Market, Founder, San Francisco, Purdue, Stanford, Qualcomm, Juniper, WorkSpan',
   authors: [{ name: 'Ankit Buti' }],
   openGraph: {
     type: 'website',

@@ -3,8 +3,8 @@ import { education } from '@/data/education';
 
 export default function Education() {
   return (
-    <section>
-      <h2 className="font-inter-tight text-lg font-semibold text-gray-800 dark:text-gray-100 mb-6">
+    <section className="animate-fade-in-up" style={{ animationDelay: '120ms' }}>
+      <h2 className="section-title font-inter-tight text-lg font-semibold text-gray-800 dark:text-gray-100">
         Education
       </h2>
       <div className="grid min-[580px]:grid-cols-2 gap-4 group">

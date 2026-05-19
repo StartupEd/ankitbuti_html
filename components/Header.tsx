@@ -4,40 +4,101 @@ import ThemeToggle from './ThemeToggle';
 const linktreeIcon =
   'https://cdn.iconscout.com/icon/free/png-256/free-linktree-logo-icon-download-in-svg-png-gif-file-formats--social-brand-communication-company-pack-logos-icons-9631079.png?f=webp&w=256';
 
+const focusAreas = [
+  'AI Product',
+  'Customer Engineering',
+  'Revenue Intelligence',
+  'Closed Loop GTM',
+  'Enterprise GTM',
+  'AI Agent Mesh',
+  "Network Effects",
+  "Data Engineering",
+];
+
 export default function Header() {
   return (
     <header className="text-center pt-6">
       <ThemeToggle />
-      <div className="mb-10">
+
+      <div className="mb-8">
+        {/* Avatar */}
         <Image
-          className="inline-flex rounded-full shadow-lg mb-4"
-          src="/images/user-image.jpg"
-          width={48}
-          height={48}
+          className="inline-flex rounded-full shadow-lg mb-4 ring-2 ring-gray-100 dark:ring-gray-800"
+          src="/images/ankit_buti.jpg"
+          width={200}
+          height={200}
           alt="Ankit Buti"
         />
-        <div className="mb-5">
-          <h1 className="font-inter-tight font-bold text-gray-800 dark:text-gray-100 text-2xl mb-1">
-            Ankit Buti
-          </h1>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Customer Engineering & AI SaaS Product Leader
-          </p>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            San Francisco, CA
-          </p>
-          <br />
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            <a href="mailto:mail@ankitbuti.com">mail@ankitbuti.com</a>
-          </p>
+
+        {/* Name & title */}
+        <h1 className="font-inter-tight font-bold text-gray-800 dark:text-gray-100 text-2xl mb-0.5">
+          Ankit Buti
+        </h1>
+        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+          Customer Engineering &amp; AI Product Leader
+        </p>
+        <p className="text-xs text-gray-400 dark:text-gray-600 mt-0.5">
+          San Francisco, CA
+        </p>
+
+        {/* Currently building badge */}
+        <div className="mt-3 mb-4">
+          <a
+            href="https://startuped.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/60 px-3 py-1 text-xs text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            Building · Startuped.ai
+            <svg className="w-2.5 h-2.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
+
+        {/* Short bio */}
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-[260px] mx-auto mb-4">
+          12+ years from software engineering to product &amp; GTM at scale. Now shipping an AI agent mesh that runs the entire go-to-market motion for businesses.
+        </p>
+
+        {/* Focus area chips */}
+        <div className="flex flex-wrap justify-center gap-1.5 mb-5">
+          {focusAreas.map((area) => (
+            <span
+              key={area}
+              className="text-[11px] px-2.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-medium"
+            >
+              {area}
+            </span>
+          ))}
+        </div>
+
+        {/* Email */}
+        <p className="mb-5">
+          <a
+            href="mailto:mail@ankitbuti.com"
+            className="inline-flex items-center justify-center gap-2 text-base md:text-lg font-semibold text-gray-800 dark:text-gray-100 hover:text-gray-600 dark:hover:text-white transition-colors tracking-tight"
+          >
+            <svg className="w-5 h-5 shrink-0 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            mail@ankitbuti.com
+          </a>
+        </p>
+
+        {/* CTA */}
         <a
           className="btn-sm text-gray-200 dark:text-gray-800 bg-gradient-to-r from-gray-800 to-gray-700 dark:from-gray-300 dark:to-gray-100 dark:hover:bg-gray-100 shadow relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.2)_50%,transparent_75%,transparent_100%)] dark:before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:before:bg-[position:-100%_0,0_0] hover:before:duration-[1500ms]"
           href="https://calendly.com/ankitbuti"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Book a Meeting
         </a>
       </div>
+
+      {/* Social icons */}
       <ul className="inline-flex gap-4">
         <li>
           <a
@@ -82,8 +143,10 @@ export default function Header() {
           </a>
         </li>
       </ul>
+
+      {/* Hero photo */}
       <br />
-      <div className="group flex justify-center gap-4">
+      <div className="group flex justify-center gap-4 mt-2">
         <Image
           className="rounded-xl even:rotate-2 odd:-rotate-2 group-hover:rotate-0 transition duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] shadow-lg"
           src="/images/ankit-1.jpg"
